@@ -1,4 +1,4 @@
-module github.com/vchimishuk/chub
+module github.com/minhducsun2002/chub
 
 go 1.21.13
 
