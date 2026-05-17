@@ -232,7 +232,12 @@ func parseIndex(params []string, sheet *Sheet) error {
 	// The first index of a file must start at 00:00:00.
 	if getFileLastIndex(getCurrentFile(sheet)) == nil {
 		if min+sec+frames != 0 {
-			return errors.New("00:00:00 time value expected.")
+			//return errors.New("00:00:00 time value expected.")
+
+			// override to 00:00:00 to keep spec
+			min = 0
+			sec = 0
+			frames = 0
 		}
 	}
 
